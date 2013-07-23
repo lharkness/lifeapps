@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <link rel="stylesheet" href="css/app.css"/>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <link rel="stylesheet" href="css/journalStrap.css"/>
+</head>
+<body>
+
+<div class="navbar" bs-navbar>
+    <div class="navbar-inner">
+        <a class="brand" href="#">LifeApps.org</a>
+        <ul class="nav">
+            <!-- You can use regular expressions -->
+            <li data-match-route="/(:?navbar)"><a href="#/navbar">Home</a></li>
+            <li data-match-route="/view1"><a href="#/view1">Reminder</a></li>
+            <li data-match-route="/view2"><a href="#/view2">Bill Track</a></li>
+            <li class="pull-right" data-match-route="/view2"><a href="#/view2">Profile</a></li>
+        </ul>
+    </div>
+</div>
+
+  <div ng-view></div>
+
+  <div>Angular seed app: v<span app-version></span></div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+  -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/angular-strap.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>
